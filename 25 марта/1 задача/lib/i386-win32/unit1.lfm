@@ -1,0 +1,114 @@
+object Form1: TForm1
+  Left = 772
+  Height = 401
+  Top = 273
+  Width = 636
+  BorderIcons = []
+  BorderStyle = bsSingle
+  Caption = 'Периметр'
+  ClientHeight = 381
+  ClientWidth = 636
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  OnShow = FormShow
+  LCLVersion = '2.0.6.0'
+  object EditN: TEdit
+    Left = 136
+    Height = 23
+    Top = 8
+    Width = 102
+    ParentFont = False
+    TabOrder = 0
+    Text = '0'
+  end
+  object EditR: TEdit
+    Left = 136
+    Height = 23
+    Top = 48
+    Width = 102
+    ParentFont = False
+    TabOrder = 1
+    Text = '0'
+  end
+  object Label1: TLabel
+    Left = 13
+    Height = 15
+    Top = 13
+    Width = 102
+    Caption = 'Количество углов:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 15
+    Top = 48
+    Width = 99
+    Caption = 'Радиус впис. окр.:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 15
+    Top = 96
+    Width = 56
+    Caption = 'Результат:'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 264
+    Height = 56
+    Top = 13
+    Width = 128
+    Caption = 'Рассчитать'
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 13
+    Height = 256
+    Top = 112
+    Width = 619
+    ParentFont = False
+    ScrollBars = ssAutoVertical
+    TabOrder = 3
+  end
+  object MainMenu1: TMainMenu
+    left = 432
+    object MenuItem1: TMenuItem
+      Caption = 'Файл'
+      OnClick = MenuItem1Click
+      object MenuItem4: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = MenuItem4Click
+      end
+      object MenuItem5: TMenuItem
+        Caption = 'Сохранить результат'
+        OnClick = MenuItem5Click
+      end
+      object MenuItem6: TMenuItem
+        Caption = 'Загрузить'
+        OnClick = MenuItem6Click
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Справка'
+      OnClick = MenuItem2Click
+    end
+    object MenuItem3: TMenuItem
+      Caption = 'Выйти'
+      OnClick = MenuItem3Click
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Filter = 'Text|*.txt'
+    left = 504
+  end
+  object SaveDialog1: TSaveDialog
+    Filter = 'Text|*.txt'
+    left = 576
+  end
+end
