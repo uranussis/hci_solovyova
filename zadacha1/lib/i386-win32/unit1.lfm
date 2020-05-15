@@ -1,0 +1,66 @@
+object Form1: TForm1
+  Left = 889
+  Height = 365
+  Top = 176
+  Width = 487
+  Caption = 'Form1'
+  ClientHeight = 365
+  ClientWidth = 487
+  LCLVersion = '2.0.6.0'
+  object Memo1: TMemo
+    Left = 8
+    Height = 256
+    Top = 104
+    Width = 472
+    TabOrder = 0
+  end
+  object EditR: TEdit
+    Left = 216
+    Height = 23
+    Top = 16
+    Width = 106
+    TabOrder = 1
+    Text = '0'
+  end
+  object EditN: TEdit
+    Left = 216
+    Height = 23
+    Top = 48
+    Width = 106
+    TabOrder = 2
+    Text = '0'
+  end
+  object Label1: TLabel
+    Left = 10
+    Height = 15
+    Top = 24
+    Width = 200
+    Caption = 'Радиус вписанной окружности (см):'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 10
+    Height = 15
+    Top = 53
+    Width = 200
+    Caption = 'Количество углов n-угольника (см):'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 10
+    Height = 15
+    Top = 88
+    Width = 56
+    Caption = 'Результат:'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 352
+    Height = 52
+    Top = 16
+    Width = 110
+    Caption = 'Рассчитать'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+end
