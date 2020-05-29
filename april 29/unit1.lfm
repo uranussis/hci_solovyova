@@ -1,0 +1,153 @@
+object Form1: TForm1
+  Left = 574
+  Height = 391
+  Top = 258
+  Width = 635
+  Caption = 'Периметр'
+  ClientHeight = 371
+  ClientWidth = 635
+  Menu = Param
+  OnCreate = FormCreate
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    AnchorSideRight.Control = EditN
+    AnchorSideBottom.Control = Label2
+    Left = 80
+    Height = 15
+    Top = 46
+    Width = 144
+    Anchors = [akLeft, akRight, akBottom]
+    BorderSpacing.Bottom = 43
+    Caption = 'Количество углов:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    AnchorSideRight.Control = EditR
+    Left = 39
+    Height = 15
+    Top = 104
+    Width = 152
+    Anchors = [akLeft, akRight]
+    Caption = 'Радиус впис. окружности:'
+    ParentColor = False
+  end
+  object EditN: TEdit
+    AnchorSideRight.Control = Button1
+    Left = 224
+    Height = 23
+    Top = 40
+    Width = 120
+    Anchors = [akLeft, akRight]
+    BorderSpacing.Right = 48
+    TabOrder = 0
+    Text = '4'
+  end
+  object EditR: TEdit
+    AnchorSideTop.Control = EditN
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Button1
+    Left = 224
+    Height = 23
+    Top = 96
+    Width = 120
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Right = 15
+    BorderSpacing.Around = 33
+    TabOrder = 1
+    Text = '15'
+  end
+  object StringGrid1: TStringGrid
+    Left = 136
+    Height = 96
+    Top = 184
+    Width = 344
+    ColCount = 3
+    FixedCols = 0
+    RowCount = 4
+    TabOrder = 2
+    ColWidths = (
+      103
+      120
+      117
+    )
+    Cells = (
+      3
+      0
+      0
+      '          Углы'
+      1
+      0
+      '         Радиус, см'
+      2
+      0
+      '    Периметр, см'
+    )
+  end
+  object Label3: TLabel
+    AnchorSideTop.Control = EditR
+    AnchorSideBottom.Control = StringGrid1
+    Left = 280
+    Height = 23
+    Top = 161
+    Width = 56
+    Anchors = [akTop, akLeft, akBottom]
+    BorderSpacing.Top = 65
+    Caption = 'Результат:'
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 392
+    Height = 79
+    Top = 40
+    Width = 155
+    Caption = 'Рассчитать'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Param: TMainMenu
+    left = 136
+    top = 320
+    object MenuItem1: TMenuItem
+      Caption = 'Параметры'
+      object LoadFromTip: TMenuItem
+        Caption = 'Загрузить из тип. файла'
+        OnClick = LoadFromTipClick
+      end
+      object SaveToTip: TMenuItem
+        Caption = 'Сохранить в тип. файл'
+        OnClick = SaveToTipClick
+      end
+    end
+    object MenuItem2: TMenuItem
+      Caption = 'Результат'
+      object SaveToTxt: TMenuItem
+        Caption = 'Сохранить в текст. файл'
+        OnClick = SaveToTxtClick
+      end
+    end
+    object Spravka: TMenuItem
+      Caption = 'Справка'
+      OnClick = SpravkaClick
+    end
+    object Close1: TMenuItem
+      Caption = 'Выход'
+      OnClick = Close1Click
+    end
+  end
+  object OpenTxt: TOpenDialog
+    left = 40
+    top = 320
+  end
+  object OpenTip: TOpenDialog
+    left = 88
+    top = 320
+  end
+  object SaveTxt: TSaveDialog
+    left = 64
+    top = 344
+  end
+  object SaveTip: TSaveDialog
+    left = 112
+    top = 344
+  end
+end
